@@ -1,5 +1,6 @@
 //import dart.io
 import 'dart:io';
+import 'dart:math';
 
 void main() {
   // Question#1:
@@ -116,8 +117,9 @@ void main() {
   // // Solution#07
   print("Enter any number");
   int? number = int.parse(stdin.readLineSync()!);
-  String square_root = number.toStringAsFixed(3);
-  print("The entered number is: $square_root");
+  double square_root = sqrt(number);
+  String squareRoot = square_root.toStringAsFixed(3);
+  print("The entered number is: $squareRoot");
 
 // Question#8:
 //Create a marksheet using operators of at least 5 subjects and output
@@ -158,20 +160,20 @@ void main() {
   // Solution#09
 
   print("Enter any number");
-  int? number = int.parse(stdin.readLineSync()!);
-  if (number % 2 == 0) {
+  int? number1 = int.parse(stdin.readLineSync()!);
+  if (number1 % 2 == 0) {
     print("$number is even.");
-    if (number % 5 == 0) {
-      print("$number is divisible by 5.");
+    if (number1 % 5 == 0) {
+      print("$number1 is divisible by 5.");
     } else {
-      print("$number is not divisible by 5.");
+      print("$number1 is not divisible by 5.");
     }
   } else {
-    print("$number is odd.");
+    print("$number1 is odd.");
     if (number % 7 == 0) {
-      print("$number is not divisible by 7.");
+      print("$number1 is not divisible by 7.");
     } else {
-      print("$number is not divisible by 7.");
+      print("$number1 is not divisible by 7.");
     }
   }
 
